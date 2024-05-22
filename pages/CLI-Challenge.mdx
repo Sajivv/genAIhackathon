@@ -1,0 +1,80 @@
+import { Header, Container, Gallery } from '../components/blocks'
+import { Box, Button } from 'rebass'
+
+<Header sx={{ bg: 'primary' }} width="narrow">
+
+# Commercial Lynks Data Science Challenge
+
+</Header>
+
+<Container
+width="narrow"
+sx={{
+    h1: {
+        color: 'altDark',
+        fontSize: 5,
+        fontWeight: 'mediumbold'
+    }
+}}>
+
+
+</Container>
+
+<Container width="narrow">
+
+# Background
+
+Commercial Lynks Inc (CLI) is a global agricultural commodities supplier. Customers from around the globe request bulk orders of different agricultural products, and CLI sources them from farmers around Montana. This process involves buying the product from the farmer, transporting it to CLI's grain elevators via truck for storage, then releasing the product from storage into railcars or trucks where it can be sent to a port for shipping.
+
+Agricultural products are measured in bushels. However, because different crops have different sizes, a bushel of barley is not equal to a bushel of corn. To avoid confusion, for this example just use the following products:
+
+Barley: 48 lbs/bushel
+1 metric ton = 45.9296 bushels
+
+Corn: 56 lbs/bushel
+1 metric ton = 39.368 bushels
+
+Wheat: 60 lbs/bushel
+1 metric ton = 36.7437 bushels
+
+Prices for agricultural products are set per bushel. For CLI to make a profit, it must sell product at a higher per bushel price than they buy it for.
+
+# Challenge
+
+CLI needs an inventory management software to keep track of sales for their grain elevator. This includes keeping track of products as they are added to the elevator, when they are released for purchase, and the total profit.
+
+The grain elevator has 15 bins, and each bin can hold 15 products. Each bin can hold 100 MT. Products are brought to the elevator in trucks and stored inside one of the bins. When a purchase order is made for one of the products, they need to be emptied into a railcar.
+
+Each railcar can hold 100 MT of a product, and is divided into 2 sections so up to 50 MT of a product can be held inside. Once a product is in a railcar, it goes to a port where it is shipped to a customer.
+
+The elevator should keep track of its incoming and outgoing product. When a purchase order is made, it should note if the product needed to fulfill the order is not bought yet, is in the elevator, is in transit by railcar, is on the ship, or has been given to the customer.
+
+# Example Flow:
+
+A purchase order for 200 bushels of barley for $10/bushel is given by Colombo Grain. They need it by May 30th, 2024.
+
+CLI sources 50 bushels for $8/bushel from Zenith Colony, 50 bushels for $7.50/bushel  from Pardue, and 100 bushels for $7/bushel  from Sky Grain to meet this order.
+
+Zenith sends their truckload to Ledger on April 2nd, where it is loaded into bin 1. Pardue sends their truckload to Ledger on April 4th, where it is loaded into bin 3. Sky Grain sends their truckload to Ledger on April 9th, where it is loaded into bin 5.
+
+All 200 bushels are loaded into Railcar #47 and sent to Seattle port on April 11th. They arrive at Seattle port on April 17th. They are loaded on a ship on April 22nd, and the ship leaves on April 25th. The ship arrives in Colombo on May 25th, and is transferred to the customer, who confirms receipt and makes payment.
+
+The total cost was
+$400 from Zenith
+$375 from Pardue
+$350 from Pardue
+Total: $1125
+
+Sold for $2000
+
+Profit = 2000 - 1125
+Profit: $875
+
+
+# Evaluation
+
+
+How will you tackle this data science problem? Show Commercial Lynks how your team leverages modern Data Science libraries. Come up with a creative graphical user interface (GUI) for CLI's logistics team to use your software. Remember, your solution does not need to completely solve the problem, just show your work from the 24 hour period. This can be through working software, or just your design of how the software could function.
+
+
+</Container>
